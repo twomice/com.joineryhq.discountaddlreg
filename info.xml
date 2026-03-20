@@ -18,13 +18,20 @@
   <version>1.2-rc</version>
   <develStage>beta</develStage>
   <compatibility>
-    <ver>5.0</ver>
+    <ver>5.51</ver>
   </compatibility>
   <comments>Developed by Joinery for FPPTA.</comments>
   <classloader>
     <psr4 prefix="Civi\" path="Civi"/>
+    <psr0 prefix="CRM_" path="."/>
   </classloader>
   <civix>
     <namespace>CRM/Discountaddlreg</namespace>
+    <format>25.10.2</format>
   </civix>
+  <upgrader>CiviMix\Schema\Discountaddlreg\AutomaticUpgrader</upgrader>
+  <mixins>
+    <mixin>entity-types-php@2.0.0</mixin>
+    <mixin>scan-classes@1.0.0</mixin>
+  </mixins>
 </extension>
